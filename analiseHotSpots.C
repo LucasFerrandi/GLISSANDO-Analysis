@@ -224,16 +224,16 @@ gStyle->SetTitleFont(42);
 crds->SetFillColor(TColor::GetColor("#1d1d1f"));
 gStyle->SetTitleTextColor(TColor::GetColor("#E0C191"));
 
-hrds->Add(HnwAB,h3,(1-ALPHA)/2,ALPHA);
+hrds->Add(HnwAB,h3,(1-ALPHA)/2,ALPHA); //OLHAR DEF DE ALFA E RDS NA DOC DO GLISSANDO
 Double_t RDS=hrds->GetEntries();
-Double_t Escala = (7.88/RDS+1);  
+Double_t Escala = (7.88/RDS+1);  //ESSE +1 NAO É TRIVIAL
 hrds->Add(hrds, Escala-1);
 Double_t binmax=hrds->GetBinContent(hrds->GetMaximumBin());
 Double_t Mcc=2.54; //GeV - Massa de dois Charms - https://pdglive.lbl.gov/DataBlock.action?node=Q004M
 Double_t threshold = Mcc/binmax;
-hrds->ShowPeaks(1,"noMarkov",threshold/3);
+hrds->ShowPeaks(1,"noMarkov",threshold/3); //MOSTRA OS PICOS, SEM CADEIA DE MARKOV. Nao sei se é um bug, mas só dá certo sem markov
 hrds->Draw("colz");
-hrds->Smooth(1,"k5b");
+hrds->Smooth(1,"k5b"); //SUAVIZA A VISUALIZAÇÃO
 
 /////////////////////////////////////////////////////////
    //Coordenadas dos hotspots (hs)   
