@@ -1,5 +1,5 @@
 #!/usr/bin/env bash 
-
+# Script que altera o .py e o .c, roda o .c e depois o .py
 #echo Qual valor de b?
 #read b
 #a
@@ -22,7 +22,7 @@ cd  ~/Downloads/root/Macro-Fev2022/ResultadosFinaisIC/"Macros e .py"
 			sed -i "s/Nevts=novo/Nevts= $Nevts/g" AnaliseFinalIC.py
 	
 	
-for r2_hs in 0.2 0.8 2.4 5 10 15
+for r2_hs in 0.2 0.8 2.4 5 10 15 #fm
 				do
 				echo 
 				sed -i 's/r_2=/r_2=delete/g' AnaliseFinalIC.py
