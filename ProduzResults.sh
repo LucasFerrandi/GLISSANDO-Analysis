@@ -2,7 +2,7 @@
 
 #echo Qual valor de b?
 #read b
-
+#a
 
 echo Quantos eventos?
 read Nevts
