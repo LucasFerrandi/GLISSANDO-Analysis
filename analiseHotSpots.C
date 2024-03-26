@@ -140,7 +140,7 @@ Int_t numbins2=xbins2*ybins2;
 
  //----------------------------------------------------------------------------
 
-
+//PRODUZ HISTOGRAMAS:
 //auto c1 = new TCanvas("nwA","nwA",600,400);
 TH2F *h1 = new TH2F("h1","Nucleus A Nw distribution",xbins,xmin,xmax,ybins,ymin,ymax);
 ntuple_A->Project("h1","y:x");
