@@ -305,7 +305,7 @@ for(Int_t iy=0;iy<=ybins;iy++){
 		Double_t bincont=hrds->GetBinContent(bin);  //bincont
 		Double_t coordy=((TAxis*)hrds->GetYaxis())->GetBinCenter(iy);  //coord y
 		Double_t coordx=((TAxis*)hrds->GetXaxis())->GetBinCenter(ix);  //coord x
-		Double_t ph = atan2(coordy,coordx);
+		Double_t ph = atan2(coordy,coordx); //angulo phi 
 		Double_t r2 = (coordx*coordx)+(coordy*coordy);
 		numsin     += r2*sin(mf*ph)*bincont;					  
 		scfix      += (r2*cos(mf*ph))*bincont;		
