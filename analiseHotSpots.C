@@ -14,7 +14,9 @@
 #include <cmath>
 #include <vector>
 #include <string.h>
-
+//Pega o .points do GLISSANDO,produz histogramas (como dist de energia) 
+//e faz cálculos (como diferentes tipos de excentricidades, por exemplo)
+//Pode ser rodado pelo ProduzResults.sh
 
 
 void analiseHotSpots()
